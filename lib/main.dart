@@ -34,8 +34,20 @@ class HomePage extends StatefulWidget {
 
 //state de homepage
 class HomePageState extends State<HomePage> {
+  int counter = 0;
+
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Oie'));
+    return Center(
+      child: GestureDetector(
+          child: Text('Contador: $counter'),
+          onTap: () {
+            setState(() { //o setstate é necessario para o estado atualizar. Se n, n veriamos nenhuma atualização na tela
+            counter++;
+            });
+            print('clicado $counter vezes');
+            
+          }),
+    );
   }
 }
