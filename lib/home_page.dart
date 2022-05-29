@@ -15,18 +15,31 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: GestureDetector(
-            child: Text('Contador: $counter'),
-            onTap: () {
-              setState(() {
+      appBar: AppBar(
+        title: Text('Home Page')
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () { 
+          setState(() {
                 //o setstate é necessario para o estado atualizar. Se n, n veriamos nenhuma atualização na tela
                 counter++;
               });
               print('clicado $counter vezes');
+         },
+
+      ),
+
+      body: Center(
+        child: GestureDetector(
+            child: Text('Contador: $counter', style: const TextStyle(fontSize: 20)),
+            onTap: () {
+              
             }),
       ),
+
+
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
