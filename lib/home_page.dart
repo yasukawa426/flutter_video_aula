@@ -14,16 +14,33 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: GestureDetector(
-          child: Text('Contador: $counter'),
-          onTap: () {
-            setState(() { //o setstate é necessario para o estado atualizar. Se n, n veriamos nenhuma atualização na tela
-            counter++;
-            });
-            print('clicado $counter vezes');
-            
-          }),
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: GestureDetector(
+            child: Text('Contador: $counter'),
+            onTap: () {
+              setState(() {
+                //o setstate é necessario para o estado atualizar. Se n, n veriamos nenhuma atualização na tela
+                counter++;
+              });
+              print('clicado $counter vezes');
+            }),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            //backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+            //backgroundColor: Colors.red,
+          ),
+        ],
+      ),
     );
   }
 }
