@@ -96,17 +96,17 @@ class CustomBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       onTap: (value) {
-        if (value == index){ //se ja estivar na pagina certa
+        if (value == index) {
+          //se ja estivar na pagina certa
           //n faz nada
-        }
-        else if (value == 0) {//home
+        } else if (value == 0) {
+          //home
           Navigator.of(context).pushReplacementNamed('/home');
-        }
-        else if(value == 1){//mapa
+        } else if (value == 1) {
+          //mapa
           Navigator.of(context).pushReplacementNamed('/map');
-    }
         }
-      ,
+      },
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -117,6 +117,11 @@ class CustomBottomBar extends StatelessWidget {
           icon: Icon(Icons.place),
           label: 'Mapa',
 
+          //backgroundColor: Colors.red,
+        ),
+        BottomNavigationBarItem(
+          icon: ImageIcon(AssetImage("res/GitHub-Mark-32px.png")),
+          label: 'GitHub',
           //backgroundColor: Colors.red,
         ),
       ],
