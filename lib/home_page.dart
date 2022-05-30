@@ -21,7 +21,12 @@ class HomePageState extends State<HomePage> {
         title: const Text('Home Page'),
         actions: [CustomSwitch()],
       ),
-      body: CustomSwitch(),
+      body: Column(
+        children: [
+          Text("Contador: $counter"),
+          CustomSwitch(),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
