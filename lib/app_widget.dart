@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_video_aula/login_page.dart';
 
 import 'app_controller.dart';
 import 'home_page.dart';
@@ -19,7 +20,7 @@ class AppWidget extends StatelessWidget {
              //faz ele trabalhar com essa palheta de cor
             ),
 
-        home: HomePage());
+        home: LoginPage());
     },);
   }
 }
