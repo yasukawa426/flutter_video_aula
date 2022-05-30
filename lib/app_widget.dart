@@ -26,7 +26,6 @@ class AppWidget extends StatelessWidget {
           '/': (context) => LoginPage(),
           '/home': (context) => HomePage(),
           '/map': (context) => MapPage(),
-          '/git': (context) => GithubPage(),
         }
         );
     },);
