@@ -105,6 +105,8 @@ class CustomBottomBar extends StatelessWidget {
         } else if (value == 1) {
           //mapa
           Navigator.of(context).pushReplacementNamed('/map');
+        } else if (value == 2) {
+          Navigator.of(context).pushReplacementNamed('/git');
         }
       },
       items: const <BottomNavigationBarItem>[

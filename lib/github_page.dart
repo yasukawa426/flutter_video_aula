@@ -11,7 +11,7 @@ class GithubPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Mapa"),
+        title: const Text("GitHub"),
       ),
       bottomNavigationBar: CustomBottomBar(index: 2),
       body: Center(
