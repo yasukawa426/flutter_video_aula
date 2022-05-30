@@ -1,6 +1,6 @@
 //stateful widget que chama o state dele msm. O HomePage vai ser chamado no home do material app
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import 'app_controller.dart';
 
 class HomePage extends StatefulWidget {
@@ -106,7 +106,7 @@ class CustomBottomBar extends StatelessWidget {
           //mapa
           Navigator.of(context).pushReplacementNamed('/map');
         } else if (value == 2) {
-          Navigator.of(context).pushReplacementNamed('/git');
+          _abrirGit();
         }
       },
       items: const <BottomNavigationBarItem>[
@@ -129,5 +129,15 @@ class CustomBottomBar extends StatelessWidget {
       ],
       currentIndex: index,
     );
+  }
+  
+  void _abrirGit() async {
+    var uri = Uri(host: "github.com", path: "yasukawa426/flutter_video_aula" );
+    const url = 'https://github.com/yasukawa426/flutter_video_aula';
+  if (await canLaunch(url)) {
+    await launch(url, forceSafariVC: true, forceWebView: true);
+  } else {
+    throw 'Could not launch $url';
+  }
   }
 }
