@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_video_aula/login_page.dart';
 
 import 'app_controller.dart';
-import 'github_page.dart';
 import 'home_page.dart';
 import 'map_page.dart';
 
