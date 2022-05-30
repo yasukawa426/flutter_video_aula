@@ -70,8 +70,7 @@ class HomePageState extends State<HomePage> {
           print('clicado $counter vezes');
         },
       ),
-      bottomNavigationBar: CustomBottomBar()
-      ,
+      bottomNavigationBar: CustomBottomBar(index: 0),
     );
   }
 }
@@ -88,24 +87,27 @@ class CustomSwitch extends StatelessWidget {
   }
 }
 
-class CustomBottomBar extends StatelessWidget{
-  const CustomBottomBar({Key? key}) : super(key: key);
+class CustomBottomBar extends StatelessWidget {
+  final int index;
+
+  const CustomBottomBar({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            //backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.place),
-            label: 'Mapa',
-            //backgroundColor: Colors.red,
-          ),
-        ],
-      );
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Home',
+          //backgroundColor: Colors.red,
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.place),
+          label: 'Mapa',
+          //backgroundColor: Colors.red,
+        ),
+      ],
+      currentIndex: index,
+    );
   }
 }
