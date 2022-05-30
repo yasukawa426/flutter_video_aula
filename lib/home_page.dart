@@ -70,20 +70,8 @@ class HomePageState extends State<HomePage> {
           print('clicado $counter vezes');
         },
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            //backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-            //backgroundColor: Colors.red,
-          ),
-        ],
-      ),
+      bottomNavigationBar: CustomBottomBar()
+      ,
     );
   }
 }
@@ -97,5 +85,27 @@ class CustomSwitch extends StatelessWidget {
         AppController.instance.changeTheme();
       },
     );
+  }
+}
+
+class CustomBottomBar extends StatelessWidget{
+  const CustomBottomBar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            //backgroundColor: Colors.red,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.place),
+            label: 'Mapa',
+            //backgroundColor: Colors.red,
+          ),
+        ],
+      );
   }
 }
