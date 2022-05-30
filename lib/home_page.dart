@@ -95,6 +95,18 @@ class CustomBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      onTap: (value) {
+        if (value == index){ //se ja estivar na pagina certa
+          //n faz nada
+        }
+        else if (value == 0) {//home
+          Navigator.of(context).pushReplacementNamed('/home');
+        }
+        else if(value == 1){//mapa
+          Navigator.of(context).pushReplacementNamed('/map');
+    }
+        }
+      ,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -104,6 +116,7 @@ class CustomBottomBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: Icon(Icons.place),
           label: 'Mapa',
+
           //backgroundColor: Colors.red,
         ),
       ],
