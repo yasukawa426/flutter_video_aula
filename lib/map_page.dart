@@ -15,6 +15,9 @@ class MapPage extends StatelessWidget {
         title: const Text("Mapa"),
       ),
       bottomNavigationBar: CustomBottomBar(index: 1),
+      body: Center(
+        child: Text("Imagine um mapa aqui!"),
+      )
     );
   }
 }
