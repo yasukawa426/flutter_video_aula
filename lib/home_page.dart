@@ -28,13 +28,13 @@ class HomePageState extends State<HomePage> {
           //mainAxisAlignment: MainAxisAlignment.center,//centraliza o eixo principal (y)
           //crossAxisAlignment: CrossAxisAlignment.start,//eixo x
           children: [
-            Text("Contador: $counter"),
             Container(
               height: 10,
             ),
             CustomSwitch(),
-            Container(
-              height: 50,
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Center(child: Text("Contador: $counter")),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -54,7 +54,7 @@ class HomePageState extends State<HomePage> {
                   width: 50,
                   height: 50,
                   color: Colors.black,
-                )
+                ),
               ],
             ),
           ],
