@@ -3,6 +3,7 @@ import 'package:flutter_video_aula/login_page.dart';
 
 import 'app_controller.dart';
 import 'home_page.dart';
+import 'map_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key, required String title}) : super(key: key);
@@ -23,6 +24,7 @@ class AppWidget extends StatelessWidget {
         routes: {
           '/': (context) => LoginPage(),
           '/home': (context) => HomePage(),
+          '/map': (context) => MapPage(),
         }
         );
     },);

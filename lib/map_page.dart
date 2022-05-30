@@ -5,8 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import 'home_page.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({Key? key}) : super(key: key);
+class MapPage extends StatelessWidget {
+  const MapPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
