@@ -54,9 +54,10 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () {
                 if (email == "email@email.com" && password == "password") {
                   //Navigator.of(context).push(//coloca a proxima tela em cima da atual, podendo voltar caso quiser
-                  Navigator.of(context).pushReplacement(//descarta a ultima tela, substituindo ela
-                    MaterialPageRoute(builder: (context) => HomePage())
-                  );
+                  //Navigator.of(context).pushReplacement(//descarta a ultima tela, substituindo ela
+                    //MaterialPageRoute(builder: (context) => HomePage())
+                  //);
+                  Navigator.of(context).pushReplacementNamed('/home'); //passa para a rota com nome '/home'
                 } else {
                   print("errado");
                 }
